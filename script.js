@@ -33,3 +33,7 @@ function typeEffect() {
 
 document.querySelector(".hero p").textContent = "";
 typeEffect();
+
+document.getElementById("themeToggle").addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+});
