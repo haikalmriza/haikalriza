@@ -19,3 +19,17 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll(".card").forEach(card => {
   observer.observe(card);
 });
+
+const text = "Data Analyst | Machine Learning | Problem Solver";
+let index = 0;
+
+function typeEffect() {
+  if (index < text.length) {
+    document.querySelector(".hero p").textContent += text.charAt(index);
+    index++;
+    setTimeout(typeEffect, 50);
+  }
+}
+
+document.querySelector(".hero p").textContent = "";
+typeEffect();
